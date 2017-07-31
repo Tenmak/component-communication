@@ -1,0 +1,9 @@
+<div>
+  Je suis Modal Component et j'affiche le composant partagé : AttachmentComponent.
+  Je peux modifier ses informations grâce à mes boutons.
+</div>
+
+<button (click)="AddToAttachment()">Add</button>
+<button (click)="DeleteFromAttachment()">Delete</button>
+
+<attach [datas]="datas" [delete]="delete"></attach>

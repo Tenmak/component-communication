@@ -8,6 +8,10 @@ const routes: Routes = [
   {
     path: 'base',
     component: BaseComponent,
+  },
+  {
+    path: 'lazy',
+    loadChildren: './../repeat-order-module/repeat-order.module#RepeatOrderModule'
   }
 ];
 

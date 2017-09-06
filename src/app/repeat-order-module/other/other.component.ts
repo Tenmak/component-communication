@@ -2,15 +2,14 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'base',
-  templateUrl: './base.component.html',
+  selector: 'other',
+  templateUrl: './other.component.html',
 })
-export class BaseComponent {
-
+export class OtherComponent {
   constructor(private router: Router) {
   }
 
-  navigate() {
-    this.router.navigate(['/lazy']);
+  navigateBack() {
+    this.router.navigate(['/base']);
   }
 }

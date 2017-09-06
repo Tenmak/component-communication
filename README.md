@@ -22,11 +22,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 An example of different component communications with a sturdy base app.
 
 Here we have several things to note :
-  - The `app.module.ts` only has what is necessary for the app to launch. Clear and efficient.
-  - The `core.module.ts` has one purpose : To provide service instances as singletons to the whole app. This ensures there are no issues with critical services that must not have several instances running at the same time. This concerns shared services, and services that need to be used with several lazy-loaded modules.
-  - The `main-module.module.ts` is pretty simple : It serves the only component that displays everything else. 
-  - The `shared.module.ts` is here to serve all the reusable components of the app. This project is mostly to show how shared components can work between one another.
-
-Now onto the details : 
-  - `ModalComponent` communicates with `AttachmentComponent` with the help of `Inputs`. Each `ModalComponent` will only communicate with his own linked `AttachmentComponent`.
-  - `GlobalModalComponent` on the other hand is not directly linked to the `GlobalAttachmentComponent`. It uses the shared service `GlobalService` which stores the data to display and provides methods to manipulate this data, which is displayed by the 2 components. `GlobalModalComponent` will use buttons to call the methods from the service to `Add` / `Remove` data; and `GlobalAttachmentComponent` will display this data. In this example, there are 2 instances of `GlobalAttachmentComponent` to show that the data from the service is shared between them.
+  - AppModule imports the MainModule (similar to your DashboardModule).
+  - ReapeatOrder module is lazy-loaded and can be navigated to from the MainModule.
+  - Both Modules import a shared module, with shared components.
+  - Both MainModule and ReapeatOrderuse the shared components in their templates.

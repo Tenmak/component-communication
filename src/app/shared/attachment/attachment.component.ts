@@ -9,7 +9,7 @@ export class AttachmentComponent implements OnChanges {
   @Input() delete: boolean;
 
   ngOnChanges(changes: { [propKey: string]: SimpleChange }) {
-    if (changes['delete'].currentValue != null) {
+    if (changes['delete'] && changes['delete'].currentValue != null) {
       this.datas.pop();
     }
   }

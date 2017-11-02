@@ -6,15 +6,15 @@ import { Component } from '@angular/core';
 })
 export class ModalComponent {
   private index = 0;
-  protected datas = [];
-  protected delete = false;
+  protected datas1 = [];
+  protected delete1 = false;
 
   AddToAttachment() {
-    this.datas.push('item_' + this.index);
+    this.datas1.push('item_' + this.index);
     this.index++;
   }
 
   DeleteFromAttachment() {
-    this.delete = !this.delete;
+    this.delete1 = !this.delete1;
   }
 }

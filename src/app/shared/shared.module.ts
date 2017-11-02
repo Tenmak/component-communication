@@ -17,13 +17,10 @@ import { GlobalModalComponent } from './global-modal/global-modal.component';
     GlobalModalComponent
   ],
   exports: [
-    AttachmentComponent,
+    CommonModule,
     ModalComponent,
     GlobalAttachmentComponent,
     GlobalModalComponent
   ],
-  entryComponents: [
-
-  ]
 })
 export class SharedBaseModule { }
